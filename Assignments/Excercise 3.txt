@@ -1,0 +1,30 @@
+1. Display all the Supplier names with the initial letter capital.
+ANS: select concat(upper(left(sname, 1)), substring(sname, 2)) as Suppilers from salesperson;
+
+2. Display all the Supplier names in upper case.
+ANS: select upper(sname) from salesperson;
+
+3. Display all the Supplier names in lower case.
+ANS: select lower(sname) from salesperson;
+
+4. Display all the Supplier names padded to 25 characters, with spaces on the left.
+ANS: select lpad(sname,25,' ') from salesperson;
+
+5. Display all the Supplier names (with ‘la’ replaced by ‘ro’).
+ANS: select rpad(sname,25,' ') from salesperson;
+
+6. Implement the above command such that ‘l’ is replaced with ‘r’ and ‘a’ is replaced
+	with ‘o’.
+ANS: select replace(sname,'l','s'),replace(sname,'a','o') from salesperson;
+
+7. Display the Supplier names and the lengths of the names.
+ANS: select sname,length(sname) from salesperson;
+
+8. Use the soundex function to search for a supplier by the name of ‘BLOKE’.
+ANS: select sname from salesperson where soundex(sname)= soundex('BLOKE');
+
+9. Display the Supplier name and the status (as Ten, Twenty, Thirty, etc.).
+ANS:
+
+10. Display the current day (e.g. Thursday).
+ANS: select dayname(curdate());
